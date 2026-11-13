@@ -1,0 +1,22 @@
+{
+  "_ajuda": "Cole o link de pagamento da Getnet de cada produto entre as aspas. O nome precisa ser IGUAL ao nome do produto na loja. Deixe vazio se ainda nao tem o link. Mantenha as virgulas e as aspas.",
+  "ativo": true,
+  "botao": "Pagar com cartão ou Pix (Getnet)",
+  "links": {
+    "Conjunto top e short": "",
+    "Short fitness cintura alta": "",
+    "Conjunto top e legging": "",
+    "Blusa manga longa": "",
+    "Conjunto jaqueta e top": "",
+    "Conjunto Exclusivo": "",
+    "Legging Cintura Alta Compress": "",
+    "Biker Short Seamless": "",
+    "Top Nadador Alto Impacto": "",
+    "Regata Dry Fit": "",
+    "Cropped Manga Longa": "",
+    "Jaqueta Corta-Vento": "",
+    "Calça Jogger Moletom": "",
+    "Macaquinho Fitness": "",
+    "Short Saia Fitness": ""
+  }
+}
