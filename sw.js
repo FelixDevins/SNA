@@ -1,5 +1,5 @@
 /* Service worker da Tracklife Fit: deixa a loja abrir rápido e funcionar sem internet (modo básico). */
-var V = 'tracklife-v3';
+var V = 'tracklife-v4';
 var CORE = ['./', 'index.html', 'manifest.json', 'icon-192.png'];
 
 self.addEventListener('install', function (e) {

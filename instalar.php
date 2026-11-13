@@ -98,7 +98,7 @@ $ESQUEMA = array($sql1, $sql2, $sql3, $sql4, $sql5);
 
 
 $erro = '';
-$v = array('host' => 'localhost', 'nome' => '', 'usuario' => '', 'email' => '');
+$v = array('host' => 'localhost', 'nome' => '', 'usuario' => '', 'email' => 'tracklife.fit@yahoo.com');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $v['host'] = trim(isset($_POST['host']) ? $_POST['host'] : 'localhost');

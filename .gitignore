@@ -1,0 +1,17 @@
+# Credenciais e configuração local
+/api/_config.php
+.env
+.env.*
+!.env.example
+
+# Arquivos enviados e dados de produção
+/uploads/*
+!/uploads/.htaccess
+*.sql
+*.sqlite
+*.sqlite3
+*.log
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db

@@ -1,0 +1,54 @@
+TRACKLIFE FIT — PACOTE PREPARADO PARA GITHUB E HOSTINGER
+========================================================
+
+ESTRUTURA
+- index.html          Loja pública
+- admin/index.html    Painel administrativo
+- api/                API PHP (login, sessão, configurações, upload e senha)
+- instalar.php        Instalador do banco MySQL (apaga-se após instalação bem-sucedida)
+- uploads/            Imagens enviadas pelo painel
+- .htaccess           HTTPS, cabeçalhos e regras Apache/LiteSpeed
+- .gitignore          Evita publicar credenciais e uploads
+
+CORREÇÕES APLICADAS NESTA VERSÃO
+- Corrigidos os caminhos da API no painel: agora /admin/ chama ../api/.
+- Logout limitado a POST.
+- Bloqueada a execução de scripts dentro de /uploads.
+- Reforçada a proteção dos arquivos internos da API.
+- Adicionado .gitignore para não versionar api/_config.php, credenciais e uploads.
+- Removida uma cópia duplicada do painel que ficava exposta na raiz.
+
+PUBLICAR NO GITHUB
+1. Crie um repositório novo e privado (recomendado).
+2. Extraia este ZIP e envie o conteúdo da pasta para a raiz do repositório.
+3. Confira que api/_config.php NÃO está no repositório. Esse arquivo só será criado no servidor pelo instalador.
+4. Não envie senhas do banco, tokens privados, dados de clientes ou imagens privadas.
+5. O GitHub Pages NÃO executa PHP. Use GitHub para versionar o código e Hostinger para hospedar a loja.
+
+INSTALAR NA HOSTINGER
+1. No hPanel, crie um banco MySQL e um usuário e associe o usuário ao banco com todos os privilégios necessários.
+2. Ative o SSL para o domínio.
+3. Faça backup do site atual antes de substituir qualquer arquivo.
+4. Envie o conteúdo do ZIP para public_html (não envie a pasta externa que contém os arquivos).
+5. Confirme que public_html contém index.html, instalar.php, api/, admin/ e .htaccess.
+6. Abra https://SEU-DOMINIO/instalar.php.
+7. Informe nome completo do banco, usuário, senha do banco e crie a senha do painel (mínimo 10 caracteres).
+8. Após a instalação, confirme que instalar.php foi removido. Se não foi, apague-o manualmente.
+9. Entre em https://SEU-DOMINIO/admin/ e teste login, salvar uma alteração, atualizar a loja e enviar uma imagem.
+10. Confira a loja em https://SEU-DOMINIO/.
+
+IMPORTANTE SOBRE CONFIGURAÇÕES
+- api/_config.php é criado pelo instalador e contém a senha do banco. Nunca publique nem compartilhe esse arquivo.
+- O painel e a API devem estar no mesmo domínio, instalados na raiz de public_html.
+- Se o domínio estiver instalado em uma subpasta, os caminhos absolutos da loja e dos uploads precisarão de ajuste.
+- Se .htaccess causar erro 500, restaure o backup e peça a análise da configuração Apache/LiteSpeed antes de remover regras de segurança.
+- A pasta uploads precisa permitir gravação pelo PHP. Comece com permissões 755; evite 777.
+
+PAGAMENTOS
+- O arquivo pagamento.json contém links vazios por padrão. Configure os links reais de checkout no painel, usando URLs HTTPS fornecidas pela Getnet ou Mercado Pago.
+- Esta versão trabalha com links de checkout hospedados pelo provedor. Ela NÃO implementa confirmação automática de pagamento por webhook nem conciliação de pedidos.
+- Não coloque senha, token secreto ou chave privada de gateway no HTML, no GitHub ou em campos públicos.
+- Antes de vender, faça uma compra de teste e valide o fluxo no painel do provedor.
+
+LIMITES DESTA PREPARAÇÃO
+Os arquivos foram corrigidos e validados localmente. Não foi possível testar uma conexão real com o MySQL da sua Hostinger, o domínio, o SSL, o envio de e-mail ou as contas Getnet/Mercado Pago sem acesso a essas contas. A publicação só deve ser considerada concluída depois dos testes descritos acima.
